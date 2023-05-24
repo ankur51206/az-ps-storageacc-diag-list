@@ -7,7 +7,7 @@ $storageAccounts = & az resource list --resource-type $resourceType --query "[].
 # Create an empty array to store the results
 $results = @()
 
-# Iterate over each storage account
+# loop each storage account
 foreach ($account in $storageAccounts) {
     # Get the diagnostic settings for the storage account
     $diagnosticSettings = & az monitor diagnostic-settings list --resource $account.StorageAccount --resource-type $resourceType --resource-group $account.ResourceGroup --query "[].name" --output json | ConvertFrom-Json
