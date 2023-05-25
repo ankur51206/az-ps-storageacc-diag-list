@@ -57,7 +57,7 @@ $resourceType = "Microsoft.Storage/storageAccounts"
 $eventHubResourceType = "Microsoft.EventHub/namespaces/eventhubs"
 
 # Subscription ID
-$subscriptionId = "12f38dd9-8e4f-4697-96aa-c3d2ccd1793c"
+$subscriptionId = "zzzzzz-zz-zzz-zzz-zzzzz"
 
 # Get the list of storage accounts and their resource groups
 $storageAccounts = & az resource list --resource-type $resourceType --subscription $subscriptionId --query "[].{ResourceGroup:resourceGroup, StorageAccount:name}" --output json | ConvertFrom-Json
