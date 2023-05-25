@@ -2,7 +2,7 @@
 $resourceType = "Microsoft.Storage/storageAccounts"
 
 # Subscription
-$account = "12f38dd9-8e4f-4697-96aa-c3d2ccd1793c"
+$account = "zzzzzzz-zzzzz-zz-zzz-zzzzzzzz"
 
 # Get the list of storage accounts and their resource groups
 $storageAccounts = & az resource list --resource-type $resourceType --query "[].{ResourceGroup:resourceGroup, StorageAccount:name}" --output json | ConvertFrom-Json
