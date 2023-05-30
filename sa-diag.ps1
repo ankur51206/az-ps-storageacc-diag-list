@@ -32,10 +32,6 @@ foreach ($storageAccount in $storageAccounts) {
             # Get the Log Analytics workspace name using the resource ID
             $logAnalyticsWorkspace = & az resource show --ids $logAnalyticsWorkspaceId --subscription $subscriptionId --query "name" --output tsv
             $attachedItem = "Log Analytics Workspace: $logAnalyticsWorkspace"
-        } elseif ($diagnosticSetting.eventHubAuthorizationRuleId) {
-            # Extract the Event Hub namespace name from the authorization rule ID
-            $eventHubNamespaceName = $diagnosticSetting.eventHubAuthorizationRuleId.Split("/")[-3]
-            $attachedItem = "Event Hub Namespace: $eventHubNamespaceName"
         }
     }
 
